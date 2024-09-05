@@ -1,0 +1,39 @@
+<body>
+  @if(spellsList){
+  <h1> Spells availables in Wizard Wold</h1>
+  <div class="container">
+    <table class="table table-responsive table-striped">
+      <thead >
+        <tr >
+          <th scope="col"> #  </th>
+          <th scope="col"> Name  </th>
+          <th scope="col"> Type  </th>
+          <th scope="col"> Effect  </th>
+        </tr>
+      </thead>
+      <tbody>
+        @for(spell of spellsList; track spell.id; let i = $index){
+          <tr (click)="onSpellClicked(spell.id)">
+            <td scope="col">{{ i + 1 }}</td>
+            <td scope="col">{{ spell.name }}</td>
+            <td scope="col">{{ spell.type }}</td>
+            <td scope="col">{{ spell.effect }}</td>
+          </tr>
+        }
+      </tbody>
+      <tfoot class="sticky-footer">
+        <tr>
+          <td colspan="4">Spells count: {{ spellsList.length }}</td>
+        </tr>
+      </tfoot>
+    </table>
+  </div>
+  }
+  @else{
+    <div class="d-flex justify-content-center">
+      <div class="spinner-border" role="status">
+        <span class="visually-hidden">Cargando...</span>
+      </div>
+    </div>
+  }
+</body>

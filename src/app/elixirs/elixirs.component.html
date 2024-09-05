@@ -1,0 +1,24 @@
+<h1> Elixirs availables in Wizard Wold</h1>
+<div class="row" style="overflow-y: auto; height: 70vh;">
+  @if(elixirsList){
+
+    @for(elixir of elixirsList; track elixir.id; let i = $index){
+      <div class="col-sm-4" style="margin-bottom:30px;">
+        <div class="card card-custom" >
+          <div class="card-body">
+            <h5 class="card-title">{{elixir.name}}</h5>
+            <p class="card-text">{{elixir.effect}}</p>
+            <a routerLink="/elixir-detail/{{elixir.id}}" class="btn btn-primary" style="bottom: 0;">More Info</a>
+          </div>
+        </div>
+      </div>
+    }
+  }
+  @else {
+    <div class="d-flex justify-content-center">
+      <div class="spinner-border" role="status">
+        <span class="visually-hidden">Cargando...</span>
+      </div>
+    </div>
+  }
+</div>

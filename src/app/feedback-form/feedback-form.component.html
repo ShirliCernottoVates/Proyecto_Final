@@ -1,0 +1,56 @@
+<div class="container">
+  <div class="row justify-content-center">
+    <form
+      class="col-md-8 col-lg-6"
+      [formGroup]="feedbackForm"
+      (submit)="handleSubmit()"
+    >
+      <fieldset class="bg-secondary text-white p-3 ">
+        <legend>Send your feedback</legend>
+        <div class="mb-3">
+          <label for="feedbackType" class="form-label">Feedback type: *</label>
+          <input
+            type="text"
+            class="form-control"
+            id="feedbackType"
+            formControlName="feedbackType"
+            placeholder="General, Elixir request, Spell request, ..."
+            autocomplete="feedbackType"
+          />
+        </div>
+        <div
+          class="alert alert-danger"
+          [hidden]="feedbackType.valid || feedbackType.untouched"
+        >
+          Feedback type is required
+        </div>
+        <div class="mb-3">
+          <label for="feedback" class="form-label">Feedback: *</label>
+          <textarea
+            type="text"
+            class="form-control"
+            id="feedback"
+            formControlName="feedback"
+            placeholder="Write your feedback"
+            autocomplete="feedback"
+          ></textarea>
+        </div>
+        <div
+          class="alert alert-danger"
+          [hidden]="feedback.valid || feedback.untouched"
+        >
+        Feedback is required
+        </div>
+        <div class="col-12 text-end">
+          <button
+            type="submit"
+            class="btn btn-outline-warning my-2"
+            [disabled]="feedbackForm.invalid"
+          >
+            Confirm
+          </button>
+        </div>
+      </fieldset>
+    </form>
+  </div>
+</div>

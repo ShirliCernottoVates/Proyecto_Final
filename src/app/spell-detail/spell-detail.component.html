@@ -1,0 +1,29 @@
+<div class="d-flex align-items-center justify-content-center full-height">
+<div class="card" style="width: 50%;">
+  @if(spellDetail){
+    <div class="card-body">
+      <h5 class="card-title">{{spellDetail.name}}</h5>
+      <h6 class="card-subtitle mb-2 text-muted">({{spellDetail.type}})</h6>
+      <p class="card-text"><b>Incantation: </b> {{spellDetail.incantation}}</p>
+      <p class="card-text"><b>Effect: </b> {{spellDetail.effect}}</p>
+      @if(spellDetail.canBeVerbal){
+        <p class="card-text"><b>Can be verbal: </b> Yes</p>
+      }
+      @else {
+        <p class="card-text"><b>Can be verbal: </b> No</p>
+      }
+      <p class="card-text" style="display:flex"><b style="margin-right: 4px;">Light: </b> {{spellDetail.light}} <img src="varita-magica.png" [style.background-color]="spellDetail.light"  alt="Icono de ejemplo" width="30px" height="30px" style="margin-left: 4px;"></p>
+      <p class="card-text"><b>Creator: </b> {{spellDetail.creator}}</p>
+
+      <a routerLink="/spells" class="card-link" style="text-align: right; display: block;">Back to the spells list</a>
+    </div>
+  }
+  @else{
+    <div class="d-flex justify-content-center">
+      <div class="spinner-border" role="status">
+        <span class="visually-hidden">Cargando...</span>
+      </div>
+    </div>
+  }
+</div>
+</div>

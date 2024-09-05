@@ -1,0 +1,28 @@
+.container{
+  height: 70vh;
+  overflow-y: auto;
+  display: inline-block;
+}
+
+thead tr th {
+  position: sticky;
+  top: 0;
+  z-index: 10;
+  background-color: #ffffff;
+}
+
+.sticky-footer {
+  position: sticky;
+  bottom: 0;
+  background-color: #ffffff;
+  box-shadow: 0 -5px 10px rgba(0,0,0,0.1);
+  text-align: right;
+}
+
+body{
+  background-color: rgb(255, 255, 255, 0.98);
+}
+
+tbody tr {
+  cursor: pointer;
+}
