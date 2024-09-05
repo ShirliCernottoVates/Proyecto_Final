@@ -62,9 +62,11 @@ Nota: la api no cuenta con un método get para acceder a los feedbacks almacenad
 
 El formulario cuenta con diferentes validaciones:
   - En primer lugar el botón 'Confirm' permanece deshabilitado mientras el formulario tenga los campos (obligatorios ambos) vacios o con algun error.
+
     ![image](https://github.com/user-attachments/assets/c036ec57-928e-4b00-81ba-14633ed55c6d)
 
   - Además si alguno de los campos esta incompleto (y recién una vez que el usuario hizo click en ese campo) se muestra un mensaje de alerta:
+    
     ![image](https://github.com/user-attachments/assets/c22cd836-1e32-4385-bd29-7d725a1fdc44)
 
 Una vez que el formulario se completa correctamente y el usuario hace click en el botón 'Confirm' se muestra un mensaje de alerta indicando que la información se guardo correctamente y se resetea el formulario
@@ -76,3 +78,4 @@ Una vez que el formulario se completa correctamente y el usuario hace click en e
 ## Página Not Found
 En caso de que el usuario ingrese a una dirección url no válida se mostrará la siguiente página de error:
 
+![image](https://github.com/user-attachments/assets/57ae5bc5-5d98-4d1b-9f04-5e755e970386)
