@@ -5,6 +5,7 @@ import { ElixirDetailComponent } from './elixir-detail/elixir-detail.component';
 import { SpellsComponent } from './spells/spells.component';
 import { SpellDetailComponent } from './spell-detail/spell-detail.component';
 import { FeedbackFormComponent } from './feedback-form/feedback-form.component';
+import { NotFoundPageComponent } from './not-found-page/not-found-page.component';
 
 export const routes: Routes = [
   {path: 'home', title: 'Home', component: HomeComponent},
@@ -14,5 +15,5 @@ export const routes: Routes = [
   {path: 'spell-detail/:id', title: 'Spell', component: SpellDetailComponent},
   {path: 'feedback-form', title: 'Send your feedback', component: FeedbackFormComponent},
   {path: '', redirectTo: '/home', pathMatch: 'full'},
-  {path: '**',   title: '404 - Not found', component: HomeComponent},
+  {path: '**',   title: '404 - Not found', component: NotFoundPageComponent},
 ];
